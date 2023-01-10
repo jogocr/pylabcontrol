@@ -145,12 +145,14 @@ Example Script that has all different types of parameters (integer, str, fload, 
         if data is not None and data is not {}:
             if plot_type in ('main', 'two'):
                 if not data['random data'] is None:
+                    axes_list[0].cla()
                     axes_list[0].plot(data['random data'])
-                    axes_list[0].hold(False)
+                    #axes_list[0].hold(False)
             if plot_type in ('aux', 'two', '2D'):
                 if not data['random data'] is None:
+                    axes_list[1].cla()
                     axes_list[1].plot(data['random data'])
-                    axes_list[1].hold(False)
+                    #axes_list[1].hold(False)
             if plot_type == '2D':
                 if 'image data' in data and not data['image data'] is None:
                     fig = axes_list[0].get_figure()
